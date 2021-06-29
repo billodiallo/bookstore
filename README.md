@@ -1,7 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # REACT Redux Bookstore  APP
-### 
+### About
+A frontend application for bookstore CMS which is build by using React and Redux.
 
 ![Hireable](https://img.shields.io/badge/Hireable-yes-success) ![](https://img.shields.io/badge/Mobile--responsive-yes-green) ![](https://img.shields.io/badge/-Microverse%20projects-blueviolet)
 
@@ -21,7 +22,6 @@
 - StyleLint
 
 ## Packages
-- [BigJS](https://github.com/MikeMcl/big.js/)
 - [PropTypes](https://www.npmjs.com/package/prop-types)
 
 ## Prerequisities
@@ -34,7 +34,7 @@ To get this project up and running locally, you must follow the steps from the [
 
 **Step 1**<br>
 Navigate through the local folder where you want to clone the repository and run<br>
-git clone `https://github.com/billodiallo/Calculator.git`. It will clone the repo to your local folder.<br>
+git clone ` https://github.com/billodiallo/bookstore.git`. It will clone the repo to your local folder.<br>
 
 **Step 2**<br>
 - Cd inside the project
