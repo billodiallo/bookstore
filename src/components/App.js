@@ -1,12 +1,13 @@
 import React from "react"
 import './App.css';
-import {BookList, BookForm}from "../containers/BookList";
+import BookList from "../containers/BookList";
+import BookForm from "../containers/BookForm";
 
 function App() {
   return (
     <div className="App">
-      <BooksList />
-      <BooksForm />
+      <BookList />
+      <BookForm />
     </div>
   );
 }
