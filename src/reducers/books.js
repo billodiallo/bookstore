@@ -7,5 +7,8 @@ if (action.type == CREATE_BOOK) {
         ...store, action.payload,
     ]
 }
-
+if (action.type === REMOVE_BOOK) {
+    return store.filter(book => book.id.toString() !== action.payload);
+  }
+  return store;
 }
