@@ -8,3 +8,8 @@ export function generateBook () {
     };
 }
 
+function generateBooks(numberofBooks) {
+    return Array.from({ length: numberofBooks }, () => generateBook());
+}
+
+export default generateBooks(10);
