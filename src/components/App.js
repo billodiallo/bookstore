@@ -3,7 +3,7 @@ import './App.css';
 import BookList from "../containers/BookList";
 import BookForm from "../containers/BookForm";
 
-function App() {
+const App = () =>{
   return (
     <div className="App">
       <BookList />
