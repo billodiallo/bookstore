@@ -1,8 +1,8 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import ProtoType from "prop-types";
 
 const Books = props => {
-    // eslint-disable-next-line react/prop-types
     const { id, title, category } = props;
     return (
       <tr>
