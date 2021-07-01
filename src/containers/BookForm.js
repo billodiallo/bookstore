@@ -48,11 +48,11 @@ const BookForm = (props) => {
       <form onSubmit={handleSubmit}>
         <label htmlFor="title">
           Title:
-          <input type="text" name="title" />
+          <input type="text" name="title"   onChange={handleChange} />
         </label>
         <label htmlFor="category">
           Category:
-          <select>
+          <select name = 'category' onChange={handleChange}>
             {bookCategories.map((category) => (
               <option key={category} value={category}>
                 {category}
@@ -60,7 +60,7 @@ const BookForm = (props) => {
             ))}
           </select>
         </label>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit"  />
       </form>
     </div>
   );
