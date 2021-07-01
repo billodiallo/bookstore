@@ -9,6 +9,7 @@ const Books = (props) => {
       <th>{id}</th>
       <th>{title}</th>
       <th>{category}</th>
+      <button type="button" onClick= {handleClick}>X</button>
     </tr>
   );
 };
