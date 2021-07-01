@@ -45,7 +45,7 @@ const BookForm = (props) => {
     <div>
       <h2>{`title: ${state.title}`}</h2>
       <h2>{`category: ${state.category}`}</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="title">
           Title:
           <input type="text" name="title" />
