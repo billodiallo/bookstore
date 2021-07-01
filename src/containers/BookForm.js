@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const BookForm = () => {
+const BookForm = props => {
+  const [state,setState] = useState(
+    id: Date.now();
+    title: ''
+    category: '',
+
+  )};
   const bookCategories = [
     'Action',
     'Biography',
