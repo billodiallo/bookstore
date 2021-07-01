@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
-const BookForm = props => {
-  const [state,setState] = useState(
-    id: Date.now();
-    title: ''
+const BookForm = (props) => {
+  const [state, setState] = useState({
+    id: Date.now(),
+    title: '',
     category: '',
+  });
 
-  )};
   const bookCategories = [
     'Action',
     'Biography',
@@ -16,7 +16,14 @@ const BookForm = props => {
     'Learning',
     'Sci-Fi',
   ];
-
+  const handleSubmit = event => {
+    event.preventDefault();
+    setState({
+      ...state, id: Date.now(),
+    });
+    props.createBook(state);
+  };
+  
   return (
     <div>
       <form>
