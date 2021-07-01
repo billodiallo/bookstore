@@ -43,6 +43,8 @@ const BookForm = (props) => {
   };
   return (
     <div>
+      <h2>{`title: ${state.title}`}</h2>
+      <h2>{`category: ${state.category}`}</h2>
       <form>
         <label htmlFor="title">
           Title:
