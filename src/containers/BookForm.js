@@ -23,7 +23,24 @@ const BookForm = (props) => {
     });
     props.createBook(state);
   };
-  
+
+  const handleChange = event => {
+    const { value } = event.target;
+    switch (event.target.name) {
+      case 'title':
+        setState({
+          ...state, title: value,
+        });
+        break;
+      case 'category':
+        setState({
+          ...state, category: value,
+        });
+        break;
+      default:
+        break;
+    }
+  };
   return (
     <div>
       <form>
