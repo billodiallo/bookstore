@@ -11,7 +11,7 @@ const Books = (props) => {
       <th>{id}</th>
       <th>{title}</th>
       <th>{category}</th>
-      <button type="button" onClick={handleClick}>X</button>
+      <button type="button" id={id} onClick={handleClick}>X</button>
     </tr>
   );
 };
@@ -20,6 +20,7 @@ Books.prototype = {
   id: ProtoType.number,
   title: ProtoType.string,
   category: ProtoType.string,
+  handleClick: ProtoType.func,
 };
 
 Books.default = {
