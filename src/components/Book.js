@@ -3,7 +3,9 @@ import React from 'react';
 import ProtoType from 'prop-types';
 
 const Books = (props) => {
-  const { id, title, category } = props;
+  const {
+    id, title, category, handleClick,
+  } = props;
   return (
     <tr>
       <th>{id}</th>
