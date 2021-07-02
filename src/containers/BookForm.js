@@ -16,7 +16,7 @@ const BookForm = (props) => {
     'Learning',
     'Sci-Fi',
   ];
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     setState({
       ...state, id: Date.now(),
@@ -24,7 +24,7 @@ const BookForm = (props) => {
     props.createBook(state);
   };
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     const { value } = event.target;
     switch (event.target.name) {
       case 'title':
@@ -48,11 +48,11 @@ const BookForm = (props) => {
       <form onSubmit={handleSubmit}>
         <label htmlFor="title">
           Title:
-          <input type="text" name="title"   onChange={handleChange} />
+          <input type="text" name="title" onChange={handleChange} />
         </label>
         <label htmlFor="category">
           Category:
-          <select name = 'category' onChange={handleChange}>
+          <select name="category" onChange={handleChange}>
             {bookCategories.map((category) => (
               <option key={category} value={category}>
                 {category}
@@ -60,10 +60,24 @@ const BookForm = (props) => {
             ))}
           </select>
         </label>
-        <input type="submit" value="Submit"  />
+        <input type="submit" value="Submit" />
       </form>
     </div>
   );
 };
 
-export default BookForm;
+BookForm.propTypes = {
+  createBook: propTypes.func,
+};
+
+BooksForm.defaultProps = {
+  createBook: createBook(),
+};
+const mapStateToProps = (state) => ({
+  books: state.books,
+});
+const mapDispatchToProps = (dispatch) => ({
+  createBook: (book) => dispatch(createBook(book)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(BookForm);
