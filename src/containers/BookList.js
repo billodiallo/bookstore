@@ -4,8 +4,14 @@ import PropTypes from 'prop-types';
 import Book from '../components/Book';
 
 const BooksList = (props) => {
-  const { books } = props;
+  const { books,removeBook } = props;
 
+  const handleRemoveBook = event => {
+    event.preventDefault();
+    removeBook(event.target.id);
+  };
+
+  
   return (
     <div>
       <h1>Books as an HTML Table</h1>
