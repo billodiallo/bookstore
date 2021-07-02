@@ -4,14 +4,13 @@ import PropTypes from 'prop-types';
 import Book from '../components/Book';
 
 const BooksList = (props) => {
-  const { books,removeBook } = props;
+  const { books, removeBook } = props;
 
-  const handleRemoveBook = event => {
+  const handleRemoveBook = (event) => {
     event.preventDefault();
     removeBook(event.target.id);
   };
 
-  
   return (
     <div>
       <h1>Books as an HTML Table</h1>
@@ -27,6 +26,7 @@ const BooksList = (props) => {
             id={book.id}
             title={book.title}
             category={book.category}
+            handleClick={handleRemoveBook}
           />
         ))}
       </table>
@@ -46,4 +46,7 @@ const mapStateToProps = (state) => ({
   books: state.books,
 });
 
-export default connect(mapStateToProps)(BooksList);
+const mapDispatchToProps = (dispatch) => ({
+  removeBook: (bookId) => dispatch(removeBook(bookId)),
+});
+export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
