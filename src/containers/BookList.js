@@ -5,7 +5,7 @@ import Book from '../components/Book';
 import { removeBook } from '../actions';
 
 const BooksList = (props) => {
-  const { books, removeBook } = props;
+  const { books,removeBook,selectedCategory,changeFilter, } = props;
 
   const handleRemoveBook = (event) => {
     event.preventDefault();
