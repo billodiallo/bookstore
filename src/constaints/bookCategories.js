@@ -6,3 +6,4 @@ const bookCategories = [
     "Learning",
     "Sci-Fi",
 ];
+export default bookCategories;
