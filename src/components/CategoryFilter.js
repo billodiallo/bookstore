@@ -1,36 +1,38 @@
 import React from 'react';
-import PropType from 'prop-types'
+import PropType from 'prop-types';
 import bookcategories from '../constaints/bookCategories';
-const CategoryFilter = props => {
-    const {handleChange} = props;
-    const bookCategoresExtented = ['All', ...bookcategories];
-    return (
-        <label htmlFor = 'category'>
-            Category:
-            <select onChange= {handleChange}
-            name = 'category'>
-               {bookCategoriesExtended.map(category => (
+
+const CategoryFilter = (props) => {
+  const { handleChange } = props;
+  const bookCategoriesExtended = ['All', ...bookcategories];
+  return (
+    <label htmlFor="category">
+      Category:
+      <select
+        onChange={handleChange}
+        name="category"
+      >
+        {bookCategoriesExtended.map((category) => (
           <option
             key={category}
-            value={category}>
+            value={category}
+          >
             {category}
           </option>
         ))}
       </select>
 
-        </label>
+    </label>
 
-    );
-
+  );
 };
 
 CategoryFilter.propTypes = {
-    handleChange: PropType.func,
-  };
-  
-  CategoryFilter.defaultProps = {
-    handleChange: null,
-  };
-  
-  export default CategoryFilter;
-  
+  handleChange: PropType.func,
+};
+
+CategoryFilter.defaultProps = {
+  handleChange: null,
+};
+
+export default CategoryFilter;
