@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createBook } from '../actions';
+import bookCategories from '../constaints/bookCategories';
+
 
 const BooksForm = (props) => {
   const [state, setState] = useState({
-    id: Date.now(),
+    id: Date.now().toString().slice(-5),
     title: '',
     category: '',
   });
