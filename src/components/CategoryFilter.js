@@ -23,3 +23,14 @@ const CategoryFilter = props => {
     );
 
 };
+
+CategoryFilter.propTypes = {
+    handleChange: PropType.func,
+  };
+  
+  CategoryFilter.defaultProps = {
+    handleChange: null,
+  };
+  
+  export default CategoryFilter;
+  
