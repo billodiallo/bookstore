@@ -4,30 +4,25 @@ import { connect } from 'react-redux';
 import { createBook } from '../actions';
 import bookCategories from '../constaints/bookCategories';
 
-
 const BooksForm = (props) => {
   const [state, setState] = useState({
     id: Date.now().toString().slice(-5),
     title: '',
-    category: '',
+    category: 'not selected',
   });
-  const bookCategories = [
-    '',
-    'Action',
-    'Biography',
-    'History',
-    'Horror',
-    'Kids',
-    'Learning',
-    'Sci-Fi',
-  ];
+  const bookCategoriesExtended = ['not selected', ...bookCategories];
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setState({
-      ...state, id: Date.now(),
-    });
-    props.createBook(state);
+    if (state.category === 'not selected' || state.title === '') {
+      alert(`None of inputs can be empty in the form! \n
+      Please fill both ttle and category fields.`);
+    } else {
+      setState({
+        ...state, id: Date.now().toString().slice(-5),
+      });
+      props.createBook(state);
+    }
   };
 
   const handleChange = (event) => {
@@ -68,7 +63,7 @@ const BooksForm = (props) => {
             onChange={handleChange}
             name="category"
           >
-            {bookCategories.map((category) => (
+            {bookCategoriesExtended.map((category) => (
               <option
                 key={category}
                 value={category}
