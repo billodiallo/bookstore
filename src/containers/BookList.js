@@ -19,6 +19,15 @@ const BooksList = (props) => {
     event.preventDefault();
     const category = event.target.value;
     changeFilter(category);
+  };
+  let currentBookList;
+  if (selectedCategory === 'All') {
+    currentBookList = books.concat();
+  }
+  else {
+    currentBookList = books.filter(books => book.category ===selectedCategory);
+    
+  }
   }
 
   return (
