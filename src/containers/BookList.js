@@ -15,6 +15,12 @@ const BooksList = (props) => {
     removeBook(bookId);
   };
 
+  const handleFilterChange = (event) => {
+    event.preventDefault();
+    const category = event.target.value;
+    changeFilter(category);
+  }
+
   return (
     <div>
       <h1>Books as an HTML Table</h1>
