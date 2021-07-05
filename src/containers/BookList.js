@@ -26,12 +26,14 @@ const BooksList = (props) => {
   }
   else {
     currentBookList = books.filter(books => book.category ===selectedCategory);
-    
+
   }
   }
 
   return (
+    
     <div>
+      <CategoryFilter handleChange = {handleFilterChange}/>
       <h1>Books as an HTML Table</h1>
       <table>
         <thead>
@@ -43,7 +45,7 @@ const BooksList = (props) => {
           </tr>
         </thead>
         <tbody>
-          {books.map((book) => (
+          {currentBookList.map((book) => (
             <Book
               key={book.id}
               id={book.id}
@@ -61,6 +63,8 @@ const BooksList = (props) => {
 BooksList.propTypes = {
   books: PropTypes.arrayOf(PropTypes.object),
   removeBook: PropTypes.func.isRequired,
+  changeFilter : PropTypes.func.isRequired,
+  selectedCategory : PropTypes.func.isRequired,
 };
 
 BooksList.defaultProps = {
