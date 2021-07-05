@@ -1,9 +1,8 @@
-/* eslint-disable no-undef */
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
-import { removeBook } from '../actions';
+import { removeBook, changeFilter } from '../actions';
 import CategoryFilter from '../components/CategoryFilter';
 
 const BooksList = (props) => {

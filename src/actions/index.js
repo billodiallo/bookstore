@@ -1,4 +1,4 @@
-import { CREATE_BOOK, REMOVE_BOOK } from '../constaints/action-types';
+import { CREATE_BOOK, REMOVE_BOOK, CHANGE_FILTER } from '../constaints/action-types';
 
 export const createBook = (book) => ({
   type: CREATE_BOOK,
@@ -9,4 +9,9 @@ export const removeBook = (bookId) => ({
   type: REMOVE_BOOK,
   payload: bookId,
 
+});
+
+export const changeFilter = (category) => ({
+  type: CHANGE_FILTER,
+  payload: category,
 });
