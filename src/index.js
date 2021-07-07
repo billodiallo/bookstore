@@ -11,7 +11,7 @@ const store = createStore(rootReducer);
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <App className="panel-bg" />
     </Provider>
 
   </React.StrictMode>,
