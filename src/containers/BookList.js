@@ -1,9 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { FAUserCircle } from 'react-icons';
+import { FaUserCircle } from 'react-icons/fa';
 import Book from '../components/Book';
-// eslint-disable-next-line import/named
 import { removeBook, changeFilter } from '../actions';
 import CategoryFilter from '../components/CategoryFilter';
 import '../index.css';
@@ -42,7 +41,7 @@ const BooksList = (props) => {
           <h2 className="book-text-in-header">Books</h2>
           <CategoryFilter handleChange={handleFilterChange} />
         </div>
-        <FAUserCircle className="user-icon" />
+        <FaUserCircle className="user-icon" />
       </div>
       <div className="book-list">
         {currentBookList.map((book) => (
