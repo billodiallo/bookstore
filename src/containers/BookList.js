@@ -35,32 +35,31 @@ const BooksList = (props) => {
   }
 
   return (
-    <div className = "booklist-and-header">
-      <div className = "header">
-        <div className = "header-navbar">
-          <h1 className = "bookstore-cms">BookStore CMS </h1>
-          <h2 className = "book-text-in-header">BOOKS</h2>
-      <CategoryFilter handleChange={handleFilterChange} />
-      <FAUserCircle className = "user-icon" />
+    <div className="booklist-and-header">
+      <div className="header">
+        <div className="header-navbar">
+          <h1 className="bookstore-cms">BookStore CMS </h1>
+          <h2 className="book-text-in-header">Books</h2>
+          <CategoryFilter handleChange={handleFilterChange} />
+        </div>
+        <FAUserCircle className="user-icon" />
       </div>
-      <div className = "book-list">
-       <div className = "book-list">
-            {currentBookList.map((book) => (
-              <Book
-                key={book.id}
-                id={book.id}
-                title={book.title}
-                category={book.category}
-                author = {book.author}
-                completedPercent = {book.completedPercent}
-                currentChapter = {book.currentChapter}
-                handleClick={handleRemoveBook}
-              />
-            ))}
-          
+      <div className="book-list">
+        {currentBookList.map((book) => (
+          <Book
+            key={book.id}
+            id={book.id}
+            title={book.title}
+            category={book.category}
+            author={book.author}
+            completedPercent={book.completedPercent}
+            currentChapter={book.currentChapter}
+            handleClick={handleRemoveBook}
+          />
+        ))}
       </div>
     </div>
-    
+
   );
 };
 
@@ -69,7 +68,7 @@ BooksList.propTypes = {
   removeBook: PropTypes.func.isRequired,
   changeFilter: PropTypes.func.isRequired,
   selectedCategory: PropTypes.func.isRequired,
-  
+
 };
 
 BooksList.defaultProps = {
