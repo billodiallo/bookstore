@@ -34,16 +34,16 @@ const BooksList = (props) => {
   }
 
   return (
-    <div className="booklist-and-header">
+    <div className="booklist-and-heaader">
       <div className="header">
         <div className="header-navbar">
-          <h1 className="bookstore-cms">BookStore CMS </h1>
-          <h2 className="book-text-in-header">Books</h2>
+          <h1 className="bookstote-cms">Bookstrote CMS</h1>
+          <h2 className="books-text-in-header">Books</h2>
           <CategoryFilter handleChange={handleFilterChange} />
         </div>
         <FaUserCircle className="user-icon" />
       </div>
-      <div className="book-list">
+      <div className="books-list">
         {currentBookList.map((book) => (
           <Book
             key={book.id}
@@ -58,7 +58,6 @@ const BooksList = (props) => {
         ))}
       </div>
     </div>
-
   );
 };
 
