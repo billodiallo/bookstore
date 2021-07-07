@@ -1,5 +1,6 @@
 import React from 'react';
-import Proptypes from 'prop-types';
+import PropTypes from 'prop-types';
+import { PieChart, Pie, Cell } from 'recharts';
 
 export default function PieChartComponent({ percentage }) {
   const data = [
@@ -21,9 +22,14 @@ export default function PieChartComponent({ percentage }) {
         dataKey="value"
       >
         {data.map((entry, index) => (
+          // eslint-disable-next-line react/no-array-index-key
           <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
         ))}
       </Pie>
     </PieChart>
   );
 }
+
+PieChartComponent.propTypes = {
+  percentage: PropTypes.number.isRequired,
+};
