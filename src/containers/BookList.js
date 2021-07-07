@@ -1,10 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { FAUserCircle } from 'react-icons';
 import Book from '../components/Book';
 // eslint-disable-next-line import/named
 import { removeBook, changeFilter } from '../actions';
 import CategoryFilter from '../components/CategoryFilter';
+import '../index.css';
 
 const BooksList = (props) => {
   const {
