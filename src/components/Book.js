@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import ProtoType from 'prop-types';
 import PieChartComponent from './PieChartComponent';
+import '../index.css';
 
 const Books = (props) => {
   const {
-    id, title, category, completedPercent, currentChapter, handleClick,
+    id, title, author, category, completedPercent, currentChapter, handleClick,
   } = props;
   return (
     <ul className="book-ul">
@@ -13,19 +15,21 @@ const Books = (props) => {
         <div className="caterory-title-author">
           <p className="category black-2">{category}</p>
           <p className="title">{title}</p>
-          <a href="www" id={id}> author</a>
+          <a href="#" id={id}>
+            {author}
+          </a>
         </div>
         <div>
 
-          <a href="www" id={id} className="flex-row-item Line-2 padding-1">
+          <a href="#" id={id} className="flex-row-item Line-2 padding-1">
             Comment
           </a>
 
-          <a href="ww" id={id} onClick={handleClick} className="flex-row-item Line-2 padding-1">
+          <a href="#" id={id} onClick={handleClick} className="flex-row-item Line-2 padding-1">
             Remove
           </a>
 
-          <a href="www" id={id} className="flex-row-item Line-2 padding-1">
+          <a href="#" id={id} className="flex-row-item Line-2 padding-1">
             Edit
           </a>
         </div>
