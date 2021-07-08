@@ -6,10 +6,15 @@ A frontend application for bookstore CMS which is build by using React and Redux
 
 ![Hireable](https://img.shields.io/badge/Hireable-yes-success) ![](https://img.shields.io/badge/Mobile--responsive-yes-green) ![](https://img.shields.io/badge/-Microverse%20projects-blueviolet)
 
+## ScreenShot
+## Screenshot
+<img src="./docs/screenshot1.JPG" width="40%" height="auto" /> </br>
+
+<img src="./docs/screenshoot2.JPG" width="40%" height="auto" />
 
 ## Live Demo 
 
-[Clic here]()
+[Clic here](https://bookstoreappbillo.herokuapp.com/)
 ## Built With
 
 - [JavaScript ES6](https://www.javascript.com/) 
