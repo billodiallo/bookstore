@@ -22,7 +22,7 @@ const Books = (props) => {
         <div>
 
           <a href="#" id={id} className="flex-row-item Line-2 padding-1">
-            Comment
+            Comments
           </a>
 
           <a href="#" id={id} onClick={handleClick} className="flex-row-item Line-2 padding-1">
