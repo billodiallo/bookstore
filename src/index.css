@@ -1,5 +1,4 @@
 body {
-  margin: 0;
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -16,6 +15,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: rgba(0, 0, 0, 0.05);
   height: 1400px;
+  margin: 0;
   padding: 0 0 794px;
 }
 

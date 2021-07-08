@@ -12,7 +12,7 @@ const Books = (props) => {
   return (
     <ul className="book-ul">
       <li>
-        <div className="caterory-title-author">
+        <div className="category-title-author">
           <p className="category black-2">{category}</p>
           <p className="title">{title}</p>
           <a href="#" id={id}>
