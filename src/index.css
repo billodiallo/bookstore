@@ -108,6 +108,7 @@ code {
   text-decoration: none;
   color: #4386bf;
   margin-left: 0;
+  text-align: left;
 }
 
 .create-book {
@@ -167,10 +168,12 @@ code {
   margin: 3px 0;
   color: #121212;
   font-weight: bold;
+  text-align: left;
 }
 
 .black-2 {
   color: #888;
+  text-align: left;
 }
 
 .Line-2 {
@@ -228,6 +231,11 @@ code {
   font-stretch: normal;
   letter-spacing: -0.18px;
   color: #888;
+  text-align: left;
+}
+
+.nnewbut {
+  text-align: left;
 }
 
 .form {

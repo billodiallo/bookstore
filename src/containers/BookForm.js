@@ -47,7 +47,9 @@ const BooksForm = (props) => {
   return (
     <div className="create-book">
       <p className="Line-4" />
-      <span className="add-new-book-text">ADD NEW BOOK</span>
+      <div className="nnewbut">
+        <span className="add-new-book-text">ADD NEW BOOK</span>
+      </div>
       <form onSubmit={handleSubmit} className="form">
         <label htmlFor="title">
           <input
